@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "photomode",
+  "version": "${version}",
+
+  "name": "Photo Mode",
+  "description": "Adds Photo Mode to the game",
+  "authors": [
+    "DanyGames2014"
+  ],
+
+  "license": "All Rights Reserved",
+  "icon": "assets/photomode/icon.png",
+
+  "environment": "client",
+  "entrypoints": {
+    "stationapi:event_bus": [
+    ],
+    "stationapi:event_bus_client": [
+      "net.danygames2014.photomode.KeyBindingListener",
+      "net.danygames2014.photomode.KeyPressedListener"
+    ],
+    "stationapi:event_bus_server": [
+    ]
+  },
+  "mixins": [
+    "photomode.mixins.json"
+  ],
+
+  "depends": {
+    "minecraft": "1.0.0-beta.7.3"
+  },
+
+  "recommends": {
+    "stationapi": "*"
+  },
+
+  "breaks": {
+    "unitweaks": "*"
+  }
+}
